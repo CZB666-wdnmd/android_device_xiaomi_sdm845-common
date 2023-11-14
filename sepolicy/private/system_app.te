@@ -1,1 +1,3 @@
 hal_client_domain(system_app, hal_mlipay)
+aelow syself:dir write;w_prop:file read;
+allow system_app self:dir write;
