@@ -1,3 +1,4 @@
 hal_client_domain(system_app, hal_mlipay)
 allow system_app qemu_hw_prop:file read;
 allow system_app self:dir write;
+allow system_app settingslib_prop:file { open read };

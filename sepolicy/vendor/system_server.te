@@ -1,1 +1,10 @@
-binder_call(system_server, glgps)
+allow vendor_init charger_prop property_service set
+allow vendor_init default_prop property_service set
+allow vendor_init freq_prop property_service set
+allow vendor_init init_service_status_private_prop file read
+allow vendor_init persist_debug_prop file read
+allow vendor_init proc_watermark_scale_factor file writebinder_call(system_server, glgps)
+
+allow system_server environ_system_data_file:dir getattr;
+allow system_server sysfs:file { read open };
+allow system_server vendor_default_prop:file { read open };
