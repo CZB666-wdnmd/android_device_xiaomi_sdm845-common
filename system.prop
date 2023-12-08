@@ -75,3 +75,6 @@ ril.subscription.types=NV,RUIM
 ro.com.android.dataroaming=false
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
+
+#Faceunlock
+ro.face.sense_service.camera_id=5
