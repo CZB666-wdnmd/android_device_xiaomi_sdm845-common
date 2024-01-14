@@ -103,7 +103,7 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
-vendor.camera.aux.packagelist=org.pixelexperience.faceunlock,com.google.android.apps.cameralite
+vendor.camera.aux.packagelist=co.aospa.sense,com.google.android.GoogleCameraEng,com.android.MGC_9_1_098
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
