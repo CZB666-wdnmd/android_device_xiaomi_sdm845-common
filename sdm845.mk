@@ -8,15 +8,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+<<<<<<< HEAD
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+=======
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
+>>>>>>> origin/udc_re
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -159,7 +160,8 @@ PRODUCT_PACKAGES += \
     memtrack.sdm845 \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
-    vendor.qti.hardware.display.allocator@1.0-service
+    vendor.qti.hardware.display.allocator@1.0-service \
+    vendor.qti.hardware.display.config-V5-ndk
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -354,13 +356,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.3-service.dual_role_usb
 
 # Vibrator
 PRODUCT_PACKAGES += \
